@@ -44,30 +44,27 @@ const bookStore = {
 }
 
 // Write your code here!
-// 1. Header update
+
 document.getElementById("header").textContent = bookStore.name;
 
-// 2. Remove default element
 document.getElementById("delete-this").remove();
 
-// 3. Get list container
 const bookList = document.getElementById("book-list");
 
-// 4. Loop books
+
 bookStore.books.forEach(book => {
 
-  // create elements
   const bookcontainer= document.createElement("li");
   const bookTitle= document.createElement("h3");
   const bookAuthor = document.createElement("p");
   const bookImage = document.createElement("img");
 
-  // fill data
+  
   bookTitle.textContent = book.title;
   bookAuthor.textContent = book.author;
   bookImage.src = book.imageUrl;
 
-  // append
+  
   bookcontainer.appendChild(bookTitle);
   bookcontainer.appendChild(bookAuthor);
   bookcontainer.appendChild(bookImage);
